@@ -11,7 +11,6 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task0.V17
     {
         static void Main(string[] args)
         {
-            int x = 2;
             DataService ds = new DataService();
             Console.Title = "Спринт #5 | Выполнила: Пьянкова В. В. | АСОиУб-23-2";
             Console.WriteLine("***************************************************************************");
@@ -31,6 +30,7 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task0.V17
             Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("***************************************************************************");
 
+            int x = 3;
             Console.WriteLine("x = " + x);
 
             Console.WriteLine("***************************************************************************");

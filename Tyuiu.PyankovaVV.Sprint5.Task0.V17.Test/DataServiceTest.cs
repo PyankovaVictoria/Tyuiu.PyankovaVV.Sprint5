@@ -10,9 +10,10 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task0.V17.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void CheckedExistsFile()
+        public void TestMethod1()
         {
             string path = @"C:\Users\Влад\source\repos\Tyuiu.PyankovaVV.Sprint5\Tyuiu.PyankovaVV.Sprint5.Task0.V17\bin\Debug\OutPutFiltTask0.txt";
+
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

@@ -15,9 +15,9 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task0.V17.Lib
         public string SaveToFileTextData(int x)
         {
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
-            double y = 2.4 * Math.Pow(x, 3) + 0.4 * Math.Pow(x, 2) - 1.4 * x + 4.1;
-            y = Math.Round(y, 3);
-            File.WriteAllText(path, Convert.ToString(y));
+            double z = 2.4 * Math.Pow(x, 3) + 0.4 * Math.Pow(x, 2) - 1.4 * x + 4.1;
+            z = Math.Round(z, 3);
+            File.WriteAllText(path, Convert.ToString(z));
             return path;
         }
     }
