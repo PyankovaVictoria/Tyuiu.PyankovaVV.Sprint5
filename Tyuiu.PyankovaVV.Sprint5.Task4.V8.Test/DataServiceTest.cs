@@ -13,7 +13,7 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task4.V8.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\Влад\Downloads\Sprint5Task4.zip\InPutDataFileTask4V8.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask4V8.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
