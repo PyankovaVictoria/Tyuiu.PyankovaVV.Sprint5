@@ -10,14 +10,15 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task7.V11.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
-        { 
+        public void CheckedExistsFile()
+        {
+            string path = @"C:\DataSprint5\InPutDataFileTask7V11.txt";
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
-    string path = @"C:\DataSprint5\InPutDataFileTask7V11.txt";
-
-    FileInfo fileinfo = new FileInfo(path);
-    private bool fileExists = fileinfo.Exists;
-    bool wait = true;
-    Assert.AreEqual(wait, fileExists);
 }

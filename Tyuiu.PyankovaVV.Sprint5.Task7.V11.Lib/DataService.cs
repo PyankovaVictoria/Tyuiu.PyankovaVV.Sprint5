@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tyuiu.cources.programming.interfaces.Sprint5;
+using System.IO;
 
 namespace Tyuiu.PyankovaVV.Sprint5.Task7.V11.Lib
 {
@@ -12,34 +13,38 @@ namespace Tyuiu.PyankovaVV.Sprint5.Task7.V11.Lib
         public string LoadDataAndSave(string path)
         {
             string pathSaveFile = @"C:\DataSprint5\OutPutDataFileTask7V11.txt";
-            FileInfo fileInfo = new FileInfo(pathSaveFile);
-            bool fileExists = fileInfo.Exists;
+
+            FileInfo fileinfo = new FileInfo(pathSaveFile);
+            bool fileExists = fileinfo.Exists;
+
             if (fileExists)
             {
                 File.Delete(pathSaveFile);
             }
 
-            string strLine = "";
+            List<string> alph = new List<string>();
+            for (char sim = 'а'; sim <= 'я'; sim++)
+            {
+                alph.Add("" + sim);
+            }
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
+                    string res = "";
                     for (int i = 0; i < line.Length; i++)
                     {
-                        if ((char.IsUpper(line[i])) && (line[i] >= 'B') && (line[i] <= 'Z'))
+                        if (!alph.Contains("" + line[i]))
                         {
-                            strLine = strLine + line[i].ToString().ToLower();
-                        }
-                        else
-                        {
-                            strLine = strLine + line[i];
+                            res += line[i];
                         }
                     }
 
-                    File.AppendAllText(pathSaveFile, strLine + Environment.NewLine);
-                    strLine = "";
+                    File.AppendAllText(pathSaveFile, res + Environment.NewLine);
+
                 }
+
             }
             return pathSaveFile;
         }
